@@ -1,20 +1,34 @@
 <template>
-  <button v-on:click="scroll"><slot></slot></button>
+  <button v-on:click="redirect" target="_blank">
+    <font-awesome-icon
+      icon="fa-brands fa-instagram"
+      class="icon"
+      v-if="socialType === 'instagram'"
+    />
+    <font-awesome-icon
+      icon="fa-brands fa-facebook-f"
+      class="icon"
+      v-if="socialType === 'facebook'"
+    />
+  </button>
 </template>
 
 <script>
 export default {
-  name: 'CustomButton',
+  name: 'SocialButton',
   props: {
+    socialType: {
+      type: String,
+      required: true,
+    },
     link: {
       type: String,
       required: true,
     },
   },
   methods: {
-    scroll() {
-      const elmnt = document.getElementById(this.link);
-      elmnt.scrollIntoView();
+    redirect() {
+      window.open(this.link);
     },
   },
 };
@@ -25,12 +39,14 @@ button {
   background: none;
   border: 2px solid;
   border-color: $secondary1;
+  border-radius: 100%;
+  height: 45px;
+  width: 45px;
   font: inherit;
   line-height: 1;
   margin: 0.5em;
-  padding: 15px 25px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 25px;
 }
 .slide:hover,
 .slide:focus {
@@ -46,4 +62,7 @@ button {
     background-color: $secondary1;
   }
 }
+// .icon {
+//   color: $secondary1;
+// }
 </style>

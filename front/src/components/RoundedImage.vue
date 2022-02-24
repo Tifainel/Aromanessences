@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-on:click="scroll">
     <img :src="imgSrc" class="rounded-image" />
     <h3><slot></slot></h3>
   </div>
@@ -12,6 +12,16 @@ export default {
     imgSrc: {
       type: String,
       required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+  },
+  methods: {
+    scroll() {
+      const elmnt = document.getElementById(this.link);
+      elmnt.scrollIntoView();
     },
   },
 };

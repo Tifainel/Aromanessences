@@ -1,14 +1,15 @@
 <template>
   <div class="header">
     <div class="left-part">
-      <img :src="logo" class="logo" href="#app" />
+      <img :src="logo" class="logo" v-on:click="scroll('app')" />
       <!-- <p class="title">Aromanessences</p> -->
     </div>
     <div class="right-part" v-show="window.width >= 570">
-      <a href="">Massage assis</a>
-      <a href="">Huiles essentielles</a>
-      <a href="">Tarifs</a>
-      <a href="">Contact</a>
+      <a href="#massage">Massage assis</a>
+      <a href="#oils">Huiles essentielles</a>
+      <a href="#bach">Fleurs de bach</a>
+      <a href="#tarif">Tarifs</a>
+      <a href="#contact">Contact</a>
     </div>
     <nav role="navigation" v-show="window.width < 570">
       <div id="menuToggle">
@@ -17,10 +18,11 @@
         <span></span>
         <span></span>
         <ul id="menu">
-          <a href="#"><li>Massage assis</li></a>
-          <a href="#"><li>Huiles essentielles</li></a>
-          <a href="#"><li>Tarifs</li></a>
-          <a href="#"><li>Contact</li></a>
+          <a href="#massage"><li>Massage assis</li></a>
+          <a href="#oils"><li>Huiles essentielles</li></a>
+          <a href="#bach"><li>Fleurs de bach</li></a>
+          <a href="#tarif"><li>Tarifs</li></a>
+          <a href="#contact"><li>Contact</li></a>
         </ul>
       </div>
     </nav>
@@ -56,6 +58,10 @@ export default {
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
+    },
+    scroll(link) {
+      const elmnt = document.getElementById(link);
+      elmnt.scrollIntoView();
     },
   },
 };

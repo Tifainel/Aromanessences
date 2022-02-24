@@ -1,19 +1,40 @@
 <template>
   <div class="welcome-section">
     <h1>AROMANESSENCES</h1>
+    <h3>
+      Fournisseur de bien être : Conseillère en Huiles Essentielles, praticienne
+      en Fleurs de Bach et praticienne en massage assis AMMA.
+    </h3>
+    <img src="../assets/separator.png" class="separator" />
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+      Aromanessences vous permet une approche différente du bien être physique,
+      psychique et émotionnel grâce aux huiles essentielles, hydrolats, huiles
+      végétales, fleurs de bach et la pratique du massage assis dit AMMA. Qui
+      peut se pratiquer en cabinet, à domicile, en entreprise, lors de
+      manifestations .... Je vous accompagne dans un bien être total grâce au
+      mariage de toutes ces pratiques.
     </p>
-    <CustomButton>Bouton test</CustomButton>
+    <CustomButton link="contact">Contact</CustomButton>
     <div class="categories">
-      <RoundedImage :imgSrc="massageImg" class="first-image">
+      <RoundedImage
+        :imgSrc="massageImg"
+        link="massage"
+        class="first-image"
+        data-aos="fade-down"
+      >
         Massage assis
       </RoundedImage>
-      <RoundedImage :imgSrc="oilsImg">Huiles essentielles</RoundedImage>
+      <RoundedImage
+        :imgSrc="oilsImg"
+        link="oils"
+        class="first-image"
+        data-aos="fade-down"
+      >
+        Huiles essentielles
+      </RoundedImage>
+      <RoundedImage :imgSrc="oilsImg" link="bach" data-aos="fade-down"
+        >Fleurs de bach</RoundedImage
+      >
     </div>
   </div>
 </template>
@@ -45,18 +66,18 @@ export default {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 20% 70px 20%;
+  padding: 50px 25% 170px 25%;
   position: relative;
 }
 h1 {
-  font-size: 50px;
+  font-size: 70px;
   margin: 0;
 }
 .categories {
   position: absolute;
   width: 70%;
   background-color: white;
-  top: 280px;
+  top: 450px;
   box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
   padding: 50px 30px 30px 30px;
   display: flex;
@@ -66,13 +87,19 @@ h1 {
 .first-image {
   margin-right: 100px;
 }
+.separator {
+  width: 50px;
+}
 
 @media screen and (max-width: $mobileBreakpoint) {
   h1 {
     font-size: 30px;
   }
+  .welcome-section {
+    padding: 50px 15% 170px 15%;
+  }
   .categories {
-    top: 90%;
+    top: 85%;
     padding: 30px;
     flex-direction: column;
   }
