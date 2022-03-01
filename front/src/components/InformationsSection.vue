@@ -1,11 +1,23 @@
 <template>
   <div class="informations-section">
     <div class="sub-section" id="massage">
-      <div class="image-part-left" data-aos="fade-right">
+      <div
+        class="image-part-left"
+        data-aos="fade-right"
+        v-show="window.width >= 1300"
+      >
+        <Organic :shape="1" color="blue" class="organic1" />
         <img src="../assets/massage.jpg" class="img-size" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
         <h2>MASSAGE ASSIS</h2>
+        <div
+          class="image-part-left"
+          data-aos="fade-right"
+          v-show="window.width < 1300"
+        >
+          <img src="../assets/massage.jpg" class="img-size" />
+        </div>
         <p>
           Par le biais du massage j'aide à améliorer la circulation de l'énergie
           vitale. À cet effet, cela permet d'éliminer tous les facteurs qui
@@ -13,15 +25,7 @@
           troubles nerveux et émotionnels. En outre, cette pratique aide à
           maintenir une bonne santé physique et psychologique. Les bienfaits du
           massage assis : Il stimule les méridiens d'acupuncture pour activer la
-          circulation énergétique dans le corps. Il a une action immédiate sur
-          le "Massé". Il donne une sensation de relaxation générale et de
-          détente physique et mentale qui permet au Massé de reprendre son
-          activité avec plus de concentration et de créativité. Il favorise la
-          réduction de stress, la fatigue, les tensions et les douleurs
-          musculaires. Il favorise l'épanouissement collectif et individuel.
-          Enfin il offre un bien-être intérieur total. En somme, l'efficacité du
-          massage AMMA assis n'est plus à démontrer. Bref aucune contrainte et
-          un résultat immédiat.
+          circulation énergétique dans le corps.
         </p>
         <h3>Déroulement d'une séance</h3>
         <p>
@@ -29,12 +33,7 @@
           menée sur une personne habillée à travers ses vêtements, sur
           l'ensemble de la partie haute du corps, cette dernière est travaillée
           entre 15 et 30 min par un enchaînement précis et composé de :
-          pressions, d'étirements, percussions et de balayages. En allant des
-          épaules vers le dos, de la nuque vers les hanches, des bras vers les
-          mains et pour finir, le praticien remonte vers la tête du patient tout
-          en identifiant les zones de tension pour les soulager et les corriger
-          afin d'aider le MASSE à se relaxer et à distribuer correctement
-          l'énergie dans son corps.
+          pressions, d'étirements, percussions et de balayages.
         </p>
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
@@ -42,6 +41,13 @@
     <div class="sub-section" id="oils">
       <div class="text-part-left" data-aos="fade-right">
         <h2>HUILES ESSENTIELLES</h2>
+        <div
+          class="image-part-right"
+          data-aos="fade-left"
+          v-show="window.width < 1300"
+        >
+          <img src="../assets/huile-essentielle.jpg" class="img-size-right" />
+        </div>
         <p>
           Les Huiles essentielles sont là pour donner un petit coup de pouce au
           corps humain qui est une formidable machine mais qui parfois s'enraye,
@@ -49,10 +55,7 @@
           d'accompagnements : (par voies cutanées, olfactives ou en diffusion) -
           Allergies saisonnières, - Problèmes musculaires, articulaires, -
           Problèmes digestifs, - Difficultés métaboliques (fatigues, drainage
-          hépatique..) - Problématiques cutanées comme l'acnée, - Troubles
-          circulatoires.... - Morosité, - Anxiété, - Dévalorisation de soi, -
-          Difficultés de concentration, - Trac, - Endormissement, Mais aussi,
-          soins de beauté pour la peau, les cheveux......
+          hépatique..)
         </p>
         <h3>Déroulement d'une séance</h3>
         <p>
@@ -62,16 +65,33 @@
         </p>
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
-      <div class="image-part-right" data-aos="fade-left">
+      <div
+        class="image-part-right"
+        data-aos="fade-left"
+        v-show="window.width >= 1300"
+      >
+        <Organic :shape="3" color="blue" class="organic3" />
         <img src="../assets/huile-essentielle.jpg" class="img-size-right" />
       </div>
     </div>
     <div class="sub-section" id="bach">
-      <div class="image-part-left" data-aos="fade-right">
+      <div
+        class="image-part-left"
+        data-aos="fade-right"
+        v-show="window.width >= 1300"
+      >
+        <Organic :shape="1" color="blue" class="organic1 organic1-rotate" />
         <img src="../assets/massage.jpg" class="img-size" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
         <h2>FLEURS DE BACH</h2>
+        <div
+          class="image-part-left"
+          data-aos="fade-right"
+          v-show="window.width < 1300"
+        >
+          <img src="../assets/massage.jpg" class="img-size" />
+        </div>
         <p>
           Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
           fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
@@ -91,18 +111,42 @@
 
 <script>
 import CustomButton from './CustomButton.vue';
+import Organic from './Organic.vue';
 
 export default {
   name: 'InformationsSection',
-  components: { CustomButton },
+  components: { CustomButton, Organic },
+
+  data() {
+    return {
+      window: {
+        width: 0,
+        height: 0,
+      },
+    };
+  },
+
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+
+  destroyed() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+
+  methods: {
+    handleResize() {
+      this.window.width = window.innerWidth;
+      this.window.height = window.innerHeight;
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .informations-section {
   margin-top: 320px;
-  // display: flex;
-  // flex-direction: column;
   padding: 0 90px;
 }
 .image-part-left {
@@ -133,6 +177,7 @@ export default {
   align-self: center;
 }
 .sub-section {
+  position: relative;
   display: flex;
 }
 .img-size {
@@ -145,5 +190,58 @@ export default {
 }
 h2 {
   font-size: 30px;
+}
+.organic1 {
+  position: absolute;
+  top: -150px;
+  left: -50px;
+  width: 500px;
+  z-index: -1;
+}
+.organic1-rotate {
+  rotate: 125deg;
+}
+.organic3 {
+  position: absolute;
+  top: 170px;
+  right: -10px;
+  width: 500px;
+  z-index: -1;
+}
+@media screen and (max-width: $mobileBreakpoint) {
+  .informations-section {
+    margin-top: 470px;
+    padding: 0 40px 30px 40px;
+  }
+  .sub-section {
+    flex-direction: column;
+  }
+  .image-part-left {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .text-part-right {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .image-part-right {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .text-part-left {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  .img-size {
+    width: 200px;
+  }
+  .img-size-right {
+    width: 200px;
+  }
+  h2 {
+    margin: 50px 0 0 0;
+  }
 }
 </style>

@@ -34,6 +34,7 @@ export default {
 #app {
   font-family: $textFont;
   font-weight: 300;
+  // overflow-x: hidden;
   h1 {
     font-family: $titleFont;
     font-weight: 700;

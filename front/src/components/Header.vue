@@ -2,16 +2,15 @@
   <div class="header">
     <div class="left-part">
       <img :src="logo" class="logo" v-on:click="scroll('app')" />
-      <!-- <p class="title">Aromanessences</p> -->
     </div>
-    <div class="right-part" v-show="window.width >= 570">
+    <div class="right-part" v-show="window.width >= 700">
       <a href="#massage">Massage assis</a>
       <a href="#oils">Huiles essentielles</a>
       <a href="#bach">Fleurs de bach</a>
       <a href="#tarif">Tarifs</a>
       <a href="#contact">Contact</a>
     </div>
-    <nav role="navigation" v-show="window.width < 570">
+    <!-- <nav role="navigation" v-show="window.width < 570">
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -25,7 +24,7 @@
           <a href="#contact"><li>Contact</li></a>
         </ul>
       </div>
-    </nav>
+    </nav> -->
   </div>
 </template>
 

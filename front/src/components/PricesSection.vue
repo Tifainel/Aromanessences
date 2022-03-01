@@ -1,43 +1,50 @@
 <template>
   <div class="prices-section" id="tarif">
     <h2>TARIFS</h2>
+    <img src="../assets/separator.png" class="separator" />
     <div class="prices">
-      <div class="massage-section" data-aos="fade-right">
+      <div class="sub-section" data-aos="fade-right">
         <h3>Massage assis</h3>
         <ul>
           <li>
-            Séance 15min .......................................................
-            15€
+            <span>Séance 15min</span>
+            <span class="dots"></span>
+            <span>15€</span>
           </li>
           <li>
-            Séance 20min .....................................................
-            20€
+            <span>Séance 20min</span>
+            <span class="dots"></span>
+            <span>20€</span>
           </li>
           <li>
-            Séance 30min .....................................................
-            30€
+            <span>Séance 30min</span>
+            <span class="dots"></span>
+            <span>30€</span>
           </li>
           <li>
-            <b>Forfaits</b> : 1/2 journée .....................................
-            200€
+            <span>1/2 journée</span>
+            <span class="dots"></span>
+            <span>200€</span>
           </li>
         </ul>
       </div>
-      <div class="oils-section" data-aos="fade-left">
+      <div class="sub-section" data-aos="fade-left">
         <h3>Huiles essentielles et <br />fleurs de Bach</h3>
         <ul>
           <li>
-            Première séance
-            ..................................................... 40€
+            <span>Première séance</span>
+            <span class="dots"></span>
+            <span>40€</span>
           </li>
           <li>
-            Séance de suivi
-            ......................................................... 35€
+            <span>Séance de suivi</span>
+            <span class="dots"></span>
+            <span>35€</span>
           </li>
           <li>
-            Étudiants
-            .......................................................................
-            35€
+            <span>Étudiants</span>
+            <span class="dots"></span>
+            <span>35€</span>
           </li>
         </ul>
       </div>
@@ -72,33 +79,59 @@ export default {
 }
 h2 {
   font-size: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
-.massage-section {
+.sub-section {
   background-color: white;
   padding: 60px;
   box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
-}
-.oils-section {
-  background-color: white;
-  padding: 60px;
-  box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
+  min-width: 30%;
 }
 h3 {
   font-size: 30px;
   text-align: center;
+  margin-top: 0;
 }
 li {
   list-style-type: none;
+  display: flex;
   font-size: 20px;
 }
 ul {
   padding: 0;
 }
-h3 {
-  margin-top: 0;
-}
 .button-position {
   margin-top: 60px;
+}
+.dots {
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  border-bottom-color: black;
+  margin: 5px;
+  flex: 1;
+}
+.separator {
+  width: 50px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: $mobileBreakpoint) {
+  .prices {
+    flex-direction: column;
+    width: 100%;
+  }
+  .sub-section {
+    padding: 30px;
+    margin-bottom: 40px;
+  }
+  .button-position {
+    margin-top: 20px;
+  }
+  li {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 25px;
+  }
 }
 </style>

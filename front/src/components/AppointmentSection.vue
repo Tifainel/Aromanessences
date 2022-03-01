@@ -1,6 +1,7 @@
 <template>
   <div class="appointment-section" id="contact">
     <h2>CONTACT</h2>
+    <img src="../assets/separator.png" class="separator" />
     <div class="sections">
       <div class="left">
         <img src="../assets/massage.jpg" class="profile-img" />
@@ -60,6 +61,7 @@ export default {
 h2 {
   font-size: 40px;
   text-align: center;
+  margin-bottom: 10px;
 }
 p {
   padding: 0 100px;
@@ -81,6 +83,29 @@ p {
 }
 .contacts {
   margin: 0;
+}
+.separator {
+  width: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: $mobileBreakpoint) {
+  .sections {
+    flex-direction: column;
+  }
+  .appointment-section {
+    text-align: center;
+    padding: 0 40px;
+  }
+  p {
+    padding: 0;
+  }
+  .left {
+    width: 100%;
+  }
+  .right {
+    height: 400px;
+    width: 100%;
+  }
 }
 </style>
 

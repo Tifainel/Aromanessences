@@ -1,5 +1,7 @@
 <template>
   <div class="welcome-section">
+    <!-- <Organic :shape="1" color="blue" class="organic1" /> -->
+    <!-- <Organic :shape="2" color="green" class="organic2" /> -->
     <h1>AROMANESSENCES</h1>
     <h3>
       Fournisseur de bien être : Conseillère en Huiles Essentielles, praticienne
@@ -40,6 +42,7 @@
 </template>
 
 <script>
+// import Organic from './Organic.vue';
 import CustomButton from './CustomButton.vue';
 import RoundedImage from './RoundedImage.vue';
 import massageImg from '../assets/massage.jpg';
@@ -91,6 +94,20 @@ h1 {
   width: 50px;
 }
 
+.organic1 {
+  position: absolute;
+  top: 100px;
+  left: -190px;
+  width: 500px;
+}
+
+.organic2 {
+  position: absolute;
+  top: -50px;
+  transform: rotate(90deg);
+  right: -190px;
+  width: 500px;
+}
 @media screen and (max-width: $mobileBreakpoint) {
   h1 {
     font-size: 30px;
@@ -105,6 +122,10 @@ h1 {
   }
   .first-image {
     margin: 0 0 20px 0;
+  }
+  .organic1,
+  .organic2 {
+    display: none;
   }
 }
 </style>

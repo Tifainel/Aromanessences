@@ -4,7 +4,7 @@
       <img src="../assets/logo.png" class="logo" />
       <p>SIRET : 827 711 557 00013</p>
     </div>
-    <hr>
+    <hr />
     <p class="warning">
       L'aromathérapie n'est pas une médecine mais une approche différente et
       complémentaire de soins. Le conseiller n'est pas médecin et n'a pas la
