@@ -40,6 +40,9 @@ export default {
     font-weight: 700;
     color: $titleColor;
   }
+  h3 {
+    font-family: $titleFont;
+  }
 }
 html {
   scroll-behavior: smooth;

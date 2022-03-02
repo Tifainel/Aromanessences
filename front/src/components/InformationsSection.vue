@@ -7,7 +7,7 @@
         v-show="window.width >= 1300"
       >
         <Organic :shape="1" color="blue" class="organic1" />
-        <img src="../assets/massage.jpg" class="img-size" />
+        <img src="../assets/massage.jpg" class="img-size" alt="massage" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
         <h2>MASSAGE ASSIS</h2>
@@ -16,16 +16,18 @@
           data-aos="fade-right"
           v-show="window.width < 1300"
         >
-          <img src="../assets/massage.jpg" class="img-size" />
+          <img src="../assets/massage.jpg" class="img-size" alt="massage" />
         </div>
         <p>
-          Par le biais du massage j'aide à améliorer la circulation de l'énergie
-          vitale. À cet effet, cela permet d'éliminer tous les facteurs qui
-          participent aux blocages énergétiques. On distingue, entre autres, les
-          troubles nerveux et émotionnels. En outre, cette pratique aide à
-          maintenir une bonne santé physique et psychologique. Les bienfaits du
-          massage assis : Il stimule les méridiens d'acupuncture pour activer la
-          circulation énergétique dans le corps.
+          Cette pratique aide à maintenir une bonne santé physique et
+          psychologique globale et à améliorer la circulation de l'énérgie
+          vitale. Les bienfaits du massage assis sont immédiats. Il stimule les
+          méridiens d'acupuncture pour activer la circulation énergétique dans
+          le corps. Réduit le stress, la fatigue, les tensions et les douleurs
+          musculaires. Il favorise également l'épanouissement collectif et
+          individuel et donne une sensation de relaxation physique et mentale
+          qui permet au massé de reprendre son activité avec plus de
+          concentration et de créativité.
         </p>
         <h3>Déroulement d'une séance</h3>
         <p>
@@ -46,22 +48,32 @@
           data-aos="fade-left"
           v-show="window.width < 1300"
         >
-          <img src="../assets/huile-essentielle.jpg" class="img-size-right" />
+          <img
+            src="../assets/huile-essentielle.jpg"
+            class="img-size-right"
+            alt="huiles"
+          />
         </div>
         <p>
           Les Huiles essentielles sont là pour donner un petit coup de pouce au
           corps humain qui est une formidable machine mais qui parfois s'enraye,
           que ce soit sur le plan physique ou moral. Quelques exemples
-          d'accompagnements : (par voies cutanées, olfactives ou en diffusion) -
-          Allergies saisonnières, - Problèmes musculaires, articulaires, -
-          Problèmes digestifs, - Difficultés métaboliques (fatigues, drainage
-          hépatique..)
+          d'accompagnements : (par voies cutanées, olfactives ou en diffusion)
+          allergies saisonnières, problèmes musculaires, articulaires, digestifs
+          et cutanés (comme l'acnée), anxiété, morosité, difficultés de
+          concentration, stress, endormissement, ... Mais aussi des soins de
+          beauté pour la peau et les cheveux.
         </p>
         <h3>Déroulement d'une séance</h3>
         <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt. Neque porro quisquam est, qui dolorem.
+          La première partie de la séance sera consacrée aux motifs de votre
+          venue avec un questionnaire Holistique (qui prend en compte l'histoire
+          de la personne dans sa globalité). Ensuite et tout au long de
+          l'entretien, je vous ferais sentir des huiles essentielles. Le test
+          olfactif est primordial. Nous trouverons ensemble une synergie
+          appropriée. Mon rôle est de vous accompagner vers une certaine
+          autonomie face aux huiles essentielles. La séance dure entre 45mn et 1
+          heure.
         </p>
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
@@ -71,7 +83,11 @@
         v-show="window.width >= 1300"
       >
         <Organic :shape="3" color="blue" class="organic3" />
-        <img src="../assets/huile-essentielle.jpg" class="img-size-right" />
+        <img
+          src="../assets/huile-essentielle.jpg"
+          class="img-size-right"
+          alt="huiles"
+        />
       </div>
     </div>
     <div class="sub-section" id="bach">
@@ -81,7 +97,7 @@
         v-show="window.width >= 1300"
       >
         <Organic :shape="1" color="blue" class="organic1 organic1-rotate" />
-        <img src="../assets/massage.jpg" class="img-size" />
+        <img src="../assets/massage.jpg" class="img-size" alt="flowers" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
         <h2>FLEURS DE BACH</h2>
@@ -90,7 +106,7 @@
           data-aos="fade-right"
           v-show="window.width < 1300"
         >
-          <img src="../assets/massage.jpg" class="img-size" />
+          <img src="../assets/massage.jpg" class="img-size" alt="flowers" />
         </div>
         <p>
           Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
@@ -98,11 +114,7 @@
           sequi nesciunt. Neque porro quisquam est, qui dolorem.
         </p>
         <h3>Déroulement d'une séance</h3>
-        <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt. Neque porro quisquam est, qui dolorem.
-        </p>
+        <p></p>
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
     </div>
@@ -190,6 +202,7 @@ export default {
 }
 h2 {
   font-size: 30px;
+  font-family: $titleFont;
 }
 .organic1 {
   position: absolute;
@@ -207,6 +220,9 @@ h2 {
   right: -10px;
   width: 500px;
   z-index: -1;
+}
+h3 {
+  margin-bottom: 0px;
 }
 @media screen and (max-width: $mobileBreakpoint) {
   .informations-section {

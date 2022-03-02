@@ -1,35 +1,38 @@
 <template>
   <div class="appointment-section" id="contact">
     <h2>CONTACT</h2>
-    <img src="../assets/separator.png" class="separator" />
+    <img src="../assets/separator.png" class="separator" alt="separator" />
     <div class="sections">
       <div class="left">
-        <img src="../assets/massage.jpg" class="profile-img" />
+        <img src="../assets/massage.jpg" class="profile-img" alt="separator" />
         <h3>Qui suis-je ?</h3>
         <p>
-          J'accompagne et conseille des professionnels de la santé tels que,
-          kinésithérapeutes, ostéopathes, masseurs, des associations sportives,
-          mais aussi des particuliers dans l'approche et l'application des
-          huiles essentielles au quotidien, en prévention et également en
-          soutient de traitements allopathiques. Pour le bien être et le confort
-          de tous les jours.
+          En tant qu'aromatologue j'accompagne et conseille des professionnels
+          de la santé tels que, kinésithérapeutes, ostéopathes, masseurs, des
+          associations sportives, mais aussi des particuliers dans l'approche et
+          l'application des huiles essentielles et fleurs de Bach au quotidien,
+          en prévention et également en soutient de traitements allopathiques.
+          Pour le bien être et le confort de tous les jours.
         </p>
         <p class="contacts">
-          <font-awesome-icon icon="fa-solid fa-phone" /> <b>06.81.17.43.00</b>
+          <font-awesome-icon icon="fa-solid fa-phone" class="icon-margin" />
+          <b>06.81.17.43.00</b>
         </p>
         <br />
         <p class="contacts">
-          <font-awesome-icon icon="fa-solid fa-at" /><b>blabla@gmail.com</b>
+          <font-awesome-icon icon="fa-solid fa-at" class="icon-margin" /><b
+            >aromanessences@gmail.com</b
+          >
         </p>
         <br />
         <SocialButton
           socialType="instagram"
-          link="https://www.instagram.com/"
+          link="https://www.instagram.com/aromanessences_nathalie_barrau/?hl=fr"
           data-aos="fade-down"
         />
         <SocialButton
           socialType="facebook"
-          link="https://facebook.com"
+          link="https://www.facebook.com/nathalie.barrau.aromanessences"
           data-aos="fade-down"
         />
       </div>
@@ -62,6 +65,7 @@ h2 {
   font-size: 40px;
   text-align: center;
   margin-bottom: 10px;
+  font-family: $titleFont;
 }
 p {
   padding: 0 100px;
@@ -87,6 +91,9 @@ p {
 .separator {
   width: 50px;
   margin-bottom: 40px;
+}
+.icon-margin {
+  margin-right: 10px;
 }
 @media screen and (max-width: $mobileBreakpoint) {
   .sections {

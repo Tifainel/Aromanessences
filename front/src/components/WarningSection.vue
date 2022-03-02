@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <div class="infos">
-      <img src="../assets/logo.png" class="logo" />
+      <img src="../assets/logo.png" class="logo" alt="logo" />
       <p>SIRET : 827 711 557 00013</p>
     </div>
     <hr />

@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="left-part">
-      <img :src="logo" class="logo" v-on:click="scroll('app')" />
+      <img :src="logo" class="logo" v-on:click="scroll('app')" alt="logo" />
     </div>
     <div class="right-part" v-show="window.width >= 700">
       <a href="#massage">Massage assis</a>

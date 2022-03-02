@@ -1,13 +1,13 @@
 <template>
   <div class="welcome-section">
-    <!-- <Organic :shape="1" color="blue" class="organic1" /> -->
-    <!-- <Organic :shape="2" color="green" class="organic2" /> -->
+    <img :src="flower" class="flower1" />
+    <img :src="flower" class="flower2" />
     <h1>AROMANESSENCES</h1>
     <h3>
       Fournisseur de bien être : Conseillère en Huiles Essentielles, praticienne
       en Fleurs de Bach et praticienne en massage assis AMMA.
     </h3>
-    <img src="../assets/separator.png" class="separator" />
+    <img src="../assets/separator.png" class="separator" alt="separator" />
     <p>
       Aromanessences vous permet une approche différente du bien être physique,
       psychique et émotionnel grâce aux huiles essentielles, hydrolats, huiles
@@ -34,19 +34,19 @@
       >
         Huiles essentielles
       </RoundedImage>
-      <RoundedImage :imgSrc="oilsImg" link="bach" data-aos="fade-down"
-        >Fleurs de bach</RoundedImage
-      >
+      <RoundedImage :imgSrc="oilsImg" link="bach" data-aos="fade-down">
+        Fleurs de bach
+      </RoundedImage>
     </div>
   </div>
 </template>
 
 <script>
-// import Organic from './Organic.vue';
 import CustomButton from './CustomButton.vue';
 import RoundedImage from './RoundedImage.vue';
 import massageImg from '../assets/massage.jpg';
 import oilsImg from '../assets/huile-essentielle.jpg';
+import flower from '../assets/flower.png';
 
 export default {
   name: 'WelcomeSection',
@@ -55,6 +55,7 @@ export default {
     return {
       massageImg,
       oilsImg,
+      flower,
     };
   },
 };
@@ -107,6 +108,19 @@ h1 {
   transform: rotate(90deg);
   right: -190px;
   width: 500px;
+}
+.flower1 {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  right: 0;
+}
+.flower2 {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  left: 0;
+  transform: scaleX(-1);
 }
 @media screen and (max-width: $mobileBreakpoint) {
   h1 {

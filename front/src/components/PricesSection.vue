@@ -1,11 +1,12 @@
 <template>
   <div class="prices-section" id="tarif">
     <h2>TARIFS</h2>
-    <img src="../assets/separator.png" class="separator" />
+    <img src="../assets/separator.png" class="separator" alt="separator" />
     <div class="prices">
       <div class="sub-section" data-aos="fade-right">
         <h3>Massage assis</h3>
         <ul>
+          <li><b>En cabinet :</b></li>
           <li>
             <span>Séance 15min</span>
             <span class="dots"></span>
@@ -21,16 +22,16 @@
             <span class="dots"></span>
             <span>30€</span>
           </li>
-          <li>
-            <span>1/2 journée</span>
-            <span class="dots"></span>
-            <span>200€</span>
+          <li class="pros">
+            <b>Déplacements particuliers, entreprises, évènements :</b>
           </li>
+          <li>Devis personnalisé sur demande</li>
         </ul>
       </div>
       <div class="sub-section" data-aos="fade-left">
         <h3>Huiles essentielles et <br />fleurs de Bach</h3>
         <ul>
+          <li><b>En cabinet :</b></li>
           <li>
             <span>Première séance</span>
             <span class="dots"></span>
@@ -39,13 +40,15 @@
           <li>
             <span>Séance de suivi</span>
             <span class="dots"></span>
-            <span>35€</span>
+            <span>30€</span>
           </li>
           <li>
             <span>Étudiants</span>
             <span class="dots"></span>
-            <span>35€</span>
+            <span>25€</span>
           </li>
+          <li class="pros"><b>À domicile ou en entreprise :</b></li>
+          <li> Tarifs en vigueur + surcoût déplacement au-delà de 10km</li>
         </ul>
       </div>
     </div>
@@ -65,6 +68,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.pros {
+  margin-top: 15px;
+}
 .prices-section {
   display: flex;
   flex-direction: column;
@@ -80,12 +86,14 @@ export default {
 h2 {
   font-size: 40px;
   margin-bottom: 10px;
+  font-family: $titleFont;
 }
 .sub-section {
   background-color: white;
   padding: 60px;
   box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
   min-width: 30%;
+  max-width: 35%;
 }
 h3 {
   font-size: 30px;
@@ -123,6 +131,7 @@ ul {
   .sub-section {
     padding: 30px;
     margin-bottom: 40px;
+    max-width: 95%;
   }
   .button-position {
     margin-top: 20px;

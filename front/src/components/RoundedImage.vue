@@ -1,6 +1,6 @@
 <template>
   <div v-on:click="scroll">
-    <img :src="imgSrc" class="rounded-image" />
+    <img :src="imgSrc" class="rounded-image" alt="rounded-image" />
     <h3><slot></slot></h3>
   </div>
 </template>
@@ -33,6 +33,9 @@ export default {
   border-radius: 100%;
   box-shadow: 20px 2px 0px 5px $secondary3;
   cursor: pointer;
+}
+h3 {
+  font-size: 22px;
 }
 
 @media screen and (max-width: $mobileBreakpoint) {
