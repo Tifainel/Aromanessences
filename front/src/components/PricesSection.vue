@@ -48,7 +48,7 @@
             <span>25€</span>
           </li>
           <li class="pros"><b>À domicile ou en entreprise :</b></li>
-          <li> Tarifs en vigueur + surcoût déplacement au-delà de 10km</li>
+          <li>Tarifs en vigueur + surcoût déplacement au-delà de 10km</li>
         </ul>
       </div>
     </div>
