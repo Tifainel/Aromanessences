@@ -4,7 +4,7 @@
     <img src="../assets/separator.png" class="separator" alt="separator" />
     <div class="sections">
       <div class="left">
-        <img src="../assets/massage.jpg" class="profile-img" alt="separator" />
+        <img src="../assets/profile.jpg" class="profile-img" alt="separator" />
         <h3>Qui suis-je ?</h3>
         <p>
           En tant qu'aromatologue j'accompagne et conseille des professionnels

@@ -49,7 +49,7 @@
           v-show="window.width < 1300"
         >
           <img
-            src="../assets/huile-essentielle.jpg"
+            src="../assets/oils.jpg"
             class="img-size-right"
             alt="huiles"
           />
@@ -84,7 +84,7 @@
       >
         <Organic :shape="3" color="blue" class="organic3" />
         <img
-          src="../assets/huile-essentielle.jpg"
+          src="../assets/oils.jpg"
           class="img-size-right"
           alt="huiles"
         />
@@ -97,7 +97,7 @@
         v-show="window.width >= 1300"
       >
         <Organic :shape="1" color="blue" class="organic1 organic1-rotate" />
-        <img src="../assets/massage.jpg" class="img-size" alt="flowers" />
+        <img src="../assets/flower.jpg" class="img-size" alt="flowers" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
         <h2>FLEURS DE BACH</h2>
@@ -106,15 +106,25 @@
           data-aos="fade-right"
           v-show="window.width < 1300"
         >
-          <img src="../assets/massage.jpg" class="img-size" alt="flowers" />
+          <img src="../assets/flower.jpg" class="img-size" alt="flowers" />
         </div>
         <p>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt. Neque porro quisquam est, qui dolorem.
+          Les fleurs de Bach sont des outils qui permettent à l'individu d'agir
+          sur son corps émotionnel et de stimuler sa force vitale. Le
+          fonctionnement des fleurs de Bach s'apparente à celui de l'homéopathie
+          et de la phytothérapie. Les élixirs floraux contiennent l'énergie de
+          la plante originelle, ce qui permet de mettre en place le processus
+          d'auto guérison de l'organisme. Chaque individu étant constitué
+          différemment, une synergie type est adaptée au tempérament et à la
+          personnalité de la personneƒ
         </p>
         <h3>Déroulement d'une séance</h3>
-        <p></p>
+        <p>
+          Durant notre entretien, des questions précises vous seront posées afin
+          de déterminer les prédominances émotionnelles à réguler. Suite à ce
+          questionnaire, une synergie et un protocole vous seront proposés afin
+          de rétablir l'harmonie et l'équilibre émotionnel.
+        </p>
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
     </div>

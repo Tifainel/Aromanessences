@@ -34,7 +34,7 @@
       >
         Huiles essentielles
       </RoundedImage>
-      <RoundedImage :imgSrc="oilsImg" link="bach" data-aos="fade-down">
+      <RoundedImage :imgSrc="bachImg" link="bach" data-aos="fade-down">
         Fleurs de bach
       </RoundedImage>
     </div>
@@ -45,8 +45,9 @@
 import CustomButton from './CustomButton.vue';
 import RoundedImage from './RoundedImage.vue';
 import massageImg from '../assets/massage.jpg';
-import oilsImg from '../assets/huile-essentielle.jpg';
+import oilsImg from '../assets/oils.jpg';
 import flower from '../assets/flower.png';
+import bachImg from '../assets/flower.jpg';
 
 export default {
   name: 'WelcomeSection',
@@ -56,6 +57,7 @@ export default {
       massageImg,
       oilsImg,
       flower,
+      bachImg,
     };
   },
 };
