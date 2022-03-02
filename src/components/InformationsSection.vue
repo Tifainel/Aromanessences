@@ -48,11 +48,7 @@
           data-aos="fade-left"
           v-show="window.width < 1300"
         >
-          <img
-            src="../assets/oils.jpg"
-            class="img-size-right"
-            alt="huiles"
-          />
+          <img src="../assets/oils.jpg" class="img-size-right" alt="huiles" />
         </div>
         <p>
           Les Huiles essentielles sont là pour donner un petit coup de pouce au
@@ -83,11 +79,7 @@
         v-show="window.width >= 1300"
       >
         <Organic :shape="3" color="blue" class="organic3" />
-        <img
-          src="../assets/oils.jpg"
-          class="img-size-right"
-          alt="huiles"
-        />
+        <img src="../assets/oils.jpg" class="img-size-right" alt="huiles" />
       </div>
     </div>
     <div class="sub-section" id="bach">
