@@ -21,7 +21,7 @@ export default {
       accessToken:
         'pk.eyJ1IjoidGlmYWluZWsiLCJhIjoiY2t6d3FwbzN2NnhrMjJ1bzEzYmZ0d3c4dyJ9.IrnY3o0lhj9CzsXLjGQ3OQ',
       mapStyle: 'mapbox://styles/tifainek/ckzwqqt0z000i14s0kf0sol3j',
-      markerCoordinates: [1.677228, 43.781737],
+      markerCoordinates: [1.67808, 43.781496],
     };
   },
 };

@@ -108,7 +108,7 @@
           la plante originelle, ce qui permet de mettre en place le processus
           d'auto guérison de l'organisme. Chaque individu étant constitué
           différemment, une synergie type est adaptée au tempérament et à la
-          personnalité de la personneƒ
+          personnalité de la personne
         </p>
         <h3>Déroulement d'une séance</h3>
         <p>
