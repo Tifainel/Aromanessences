@@ -16,7 +16,7 @@
       manifestations .... Je vous accompagne dans un bien être total grâce au
       mariage de toutes ces pratiques.
     </p>
-    <CustomButton link="contact">Contact</CustomButton>
+    <ButtonLink link="https://fr.resaclick.net/aromanessencesnathal">Prendre RDV</ButtonLink>
     <div class="categories">
       <RoundedImage
         :imgSrc="massageImg"
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import CustomButton from './CustomButton.vue';
+import ButtonLink from './ButtonLink.vue';
 import RoundedImage from './RoundedImage.vue';
 import massageImg from '../assets/massage.jpg';
 import oilsImg from '../assets/oils.jpg';
@@ -51,7 +51,7 @@ import bachImg from '../assets/flower.jpg';
 
 export default {
   name: 'WelcomeSection',
-  components: { CustomButton, RoundedImage },
+  components: { ButtonLink, RoundedImage },
   data() {
     return {
       massageImg,
@@ -124,6 +124,11 @@ h1 {
   left: 0;
   transform: scaleX(-1);
 }
+
+.buttons {
+  display: flex;  
+}
+
 @media screen and (max-width: $mobileBreakpoint) {
   h1 {
     font-size: 30px;

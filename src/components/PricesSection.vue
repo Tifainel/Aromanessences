@@ -35,7 +35,7 @@
           <li>
             <span>Première séance</span>
             <span class="dots"></span>
-            <span>35€</span>
+            <span>40€</span>
           </li>
           <li>
             <span>Séance de suivi</span>
@@ -52,18 +52,19 @@
         </ul>
       </div>
     </div>
-    <CustomButton class="button-position" link="contact">
-      Me contacter
-    </CustomButton>
+    <ButtonLink class="button-position" link="https://fr.resaclick.net/aromanessencesnathal">
+      Prendre RDV
+    </ButtonLink>
+
   </div>
 </template>
 
 <script>
-import CustomButton from './CustomButton.vue';
+import ButtonLink from './ButtonLink.vue';
 
 export default {
   name: 'PricesSection',
-  components: { CustomButton },
+  components: { ButtonLink },
 };
 </script>
 
