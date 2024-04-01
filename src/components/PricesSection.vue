@@ -47,8 +47,26 @@
             <span class="dots"></span>
             <span>25€</span>
           </li>
-          <li class="pros"><b>À domicile :</b></li>
-          <li>Tarifs en vigueur + surcoût déplacement au-delà de 10km</li>
+        </ul>
+      </div>
+      <div class="sub-section" data-aos="fade-left">
+        <h3>Soin signature</h3>
+        <ul>
+          <li><b>En cabinet :</b></li>
+          <li>
+            <span>Séance 20min</span>
+            <span class="dots"></span>
+            <span>20€</span>
+          </li>
+          <li>
+            <span>Minute supp.</span>
+            <span class="dots"></span>
+            <span>1€ / min</span>
+          </li>
+          <li class="pros">
+            <b>Déplacements particuliers, entreprises, évènements :</b>
+          </li>
+          <li>Devis personnalisé sur demande</li>
         </ul>
       </div>
     </div>
@@ -81,6 +99,7 @@ export default {
 }
 .prices {
   display: flex;
+  gap: 30px;
   justify-content: space-around;
   width: 80%;
 }
@@ -93,8 +112,8 @@ h2 {
   background-color: white;
   padding: 60px;
   box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
-  min-width: 30%;
-  max-width: 35%;
+  min-width: 25%;
+  max-width: 30%;
 }
 h3 {
   font-size: 30px;
@@ -128,10 +147,10 @@ ul {
   .prices {
     flex-direction: column;
     width: 100%;
+    gap: 20px;
   }
   .sub-section {
     padding: 30px;
-    margin-bottom: 40px;
     max-width: 95%;
   }
   .button-position {

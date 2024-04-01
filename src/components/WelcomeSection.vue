@@ -21,7 +21,6 @@
       <RoundedImage
         :imgSrc="massageImg"
         link="massage"
-        class="first-image"
         data-aos="fade-down"
       >
         Massage assis
@@ -29,13 +28,19 @@
       <RoundedImage
         :imgSrc="oilsImg"
         link="oils"
-        class="first-image"
         data-aos="fade-down"
       >
         Huiles essentielles
       </RoundedImage>
       <RoundedImage :imgSrc="bachImg" link="bach" data-aos="fade-down">
         Fleurs de bach
+      </RoundedImage>
+      <RoundedImage
+        :imgSrc="signatureImg"
+        link="signature-soin"
+        data-aos="fade-down"
+      >
+        Soin signature
       </RoundedImage>
     </div>
   </div>
@@ -48,6 +53,7 @@ import massageImg from '../assets/massage.jpg';
 import oilsImg from '../assets/oils.jpg';
 import flower from '../assets/flower.png';
 import bachImg from '../assets/flower.jpg';
+import signatureImg from '../assets/signature-soin.jpg';
 
 export default {
   name: 'WelcomeSection',
@@ -58,6 +64,7 @@ export default {
       oilsImg,
       flower,
       bachImg,
+      signatureImg,
     };
   },
 };
@@ -81,9 +88,10 @@ h1 {
 }
 .categories {
   position: absolute;
-  width: 70%;
+  width: 80%;
   background-color: white;
   top: 450px;
+  gap: 70px;
   box-shadow: 1px 1px 24px 5px rgba(0, 0, 0, 0.1);
   padding: 50px 30px 30px 30px;
   display: flex;
@@ -139,10 +147,8 @@ h1 {
   .categories {
     top: 85%;
     padding: 30px;
+    gap: 20px;
     flex-direction: column;
-  }
-  .first-image {
-    margin: 0 0 20px 0;
   }
   .organic1,
   .organic2 {

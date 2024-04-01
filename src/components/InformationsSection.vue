@@ -10,7 +10,7 @@
         <img src="../assets/massage.jpg" class="img-size" alt="massage" />
       </div>
       <div class="text-part-right" data-aos="fade-left">
-        <h2>MASSAGE ASSIS</h2>
+        <h2 class="title">MASSAGE ASSIS</h2>
         <div
           class="image-part-left"
           data-aos="fade-right"
@@ -120,15 +120,64 @@
         <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
       </div>
     </div>
+    <div class="sub-section" id="signature-soin">
+      <div class="text-part-left" data-aos="fade-right">
+        <h2>SOIN SIGNATURE</h2>
+        <div
+          class="image-part-right"
+          data-aos="fade-left"
+          v-show="window.width < 1300"
+        >
+          <img
+            src="../assets/signature-soin.jpg"
+            class="img-size-right"
+            alt="signature"
+          />
+        </div>
+        <p>
+          Le soin signature est un modelage des mains et avant bras doublé de
+          points d’acupression. Il permet de réduire les troubles
+          musculosquelétiques (TMS) de la main liés à une mauvaise posture au
+          travail. Il favorise le relâchement des tensions musculaires, soulage
+          douleurs au niveau des ligaments et des tendons et apporte de la
+          souplesse dans le mouvement. Il permet aussi de stimuler les nerfs
+          grâce aux terminaisons nerveuses présentes dans les mains ainsi que
+          les points d’acupression reliés à certains organes et relaxe et
+          stimule l’énergie.<br />L'acupression des mains
+          <b>permet de stimuler l'ensemble de l'organisme</b> puisque 6 des 14
+          méridiens transportant l'énergie vitale du corps traversent les mains.
+        </p>
+        <h3>Déroulement d'une séance</h3>
+        <p>
+          Vous êtes assis confortablement pendant que je m’occupe de vos mains
+          et avant bras durant 15 minutes. J’utilise une crème spéciale massage
+          (neutre) du bout des doigts aux coudes. Un enchaînement précis vous
+          amènera une détente complète.
+        </p>
+        <CustomButton class="button-align" link="tarif">Tarifs</CustomButton>
+      </div>
+      <div
+        class="image-part-right"
+        data-aos="fade-left"
+        v-show="window.width >= 1300"
+      >
+        <Organic :shape="3" color="blue" class="organic3" />
+        <img
+          src="../assets/signature-soin.jpg"
+          class="img-size-right"
+          alt="signature-soin"
+        />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import CustomButton from './CustomButton.vue';
-import Organic from './Organic.vue';
+import CustomButton from "./CustomButton.vue";
+import Organic from "./Organic.vue";
 
 export default {
-  name: 'InformationsSection',
+  name: "InformationsSection",
   components: { CustomButton, Organic },
 
   data() {
@@ -141,12 +190,12 @@ export default {
   },
 
   created() {
-    window.addEventListener('resize', this.handleResize);
+    window.addEventListener("resize", this.handleResize);
     this.handleResize();
   },
 
   destroyed() {
-    window.removeEventListener('resize', this.handleResize);
+    window.removeEventListener("resize", this.handleResize);
   },
 
   methods: {
@@ -260,6 +309,9 @@ h3 {
   }
   h2 {
     margin: 50px 0 0 0;
+  }
+  .title {
+    margin-top: 270px;
   }
 }
 </style>
