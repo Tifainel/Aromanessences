@@ -35,17 +35,17 @@
           <li>
             <span>Première séance</span>
             <span class="dots"></span>
-            <span>40€</span>
+            <span>50€</span>
           </li>
           <li>
             <span>Séance de suivi</span>
             <span class="dots"></span>
-            <span>25€</span>
+            <span>40€</span>
           </li>
           <li>
             <span>Étudiants</span>
             <span class="dots"></span>
-            <span>25€</span>
+            <span>35€</span>
           </li>
         </ul>
       </div>
