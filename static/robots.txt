@@ -1,0 +1,6 @@
+# Robots.txt for Aromanessences
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aromanessences.com/sitemap.xml
