@@ -102,6 +102,7 @@
   @media screen and (max-width: $mobileBreakpoint) {
     h1 {
       font-size: 30px;
+      margin-top: 25px;
     }
 
     .welcome-section {

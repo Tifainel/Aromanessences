@@ -17,7 +17,7 @@
     saurais être tenue responsable quant aux mauvais usages qui pourraient
     être réalisés à l'aide de mes conseils.
   </p>
-  <p class="copyright">Réalisé avec ♡ par Tifaine Larroque. © {new Date().getFullYear()} Aromanessences - Tous droits réservés</p>
+  <p class="copyright">Réalisé avec ♡ par <a href="https://tifainestudio.com" target="_blank">Tifaine Larroque</a> · © {new Date().getFullYear()} Aromanessences - Tous droits réservés · <a href="/mentions-legales">Mentions légales</a></p>
 </footer>
 
 <style lang="scss">
@@ -81,6 +81,16 @@
     text-align: center;
     margin-top: 20px;
     opacity: 0.7;
+
+    a {
+      color: inherit;
+
+      &:visited,
+      &:hover,
+      &:active {
+        color: inherit;
+      }
+    }
   }
 
   @media screen and (max-width: $mobileBreakpoint) {
